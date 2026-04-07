@@ -23,6 +23,7 @@ class LoginViewModel : ViewModel() {
                 loginResult.postValue(resposta.id)
             }catch (e: Exception){
                 Log.e("API", "Error fent login: ${e.message}")
+                loginResult.postValue(null)
             }
         }
     }
